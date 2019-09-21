@@ -94,11 +94,7 @@ void ofApp::gui(ofEventArgs& e) {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
-	if (key == ' ') {
-		ofPixels pixels;
-		final_out_fbo.readToPixels(pixels);
-		ofSaveImage(pixels, "test.png");
-	}
+
 }
 
 //--------------------------------------------------------------
