@@ -19,16 +19,16 @@ void ofApp::setup() {
 	settings.minFilter = GL_NEAREST;
 	settings.maxFilter = GL_NEAREST;
 
-	ofxGen::Manager::register_<Layers::Layer01_2d>("Layer01_2d");
-	ofxGen::Manager::register_<Layers::Layer02_2d>("Layer02_2d");
-	ofxGen::Manager::register_<Layers::Layer03_2d>("Layer03_2d");
+	ofxGen::Manager::registration<Layers::Layer01_2d>("Layer01_2d");
+	ofxGen::Manager::registration<Layers::Layer02_2d>("Layer02_2d");
+	ofxGen::Manager::registration<Layers::Layer03_2d>("Layer03_2d");
 
-	ofxGen::Manager::register_<Layers::Layer01_3d>("Layer01_3d");
-	ofxGen::Manager::register_<Layers::Layer02_3d>("Layer02_3d");
-	ofxGen::Manager::register_<Layers::Layer03_3d>("Layer03_3d");
-	ofxGen::Manager::register_<Layers::Layer04_3d>("Layer04_3d");
-	ofxGen::Manager::register_<Layers::Layer05_3d>("Layer05_3d");
-	ofxGen::Manager::register_<Layers::Layer06_3d>("Layer06_3d");
+	ofxGen::Manager::registration<Layers::Layer01_3d>("Layer01_3d");
+	ofxGen::Manager::registration<Layers::Layer02_3d>("Layer02_3d");
+	ofxGen::Manager::registration<Layers::Layer03_3d>("Layer03_3d");
+	ofxGen::Manager::registration<Layers::Layer04_3d>("Layer04_3d");
+	ofxGen::Manager::registration<Layers::Layer05_3d>("Layer05_3d");
+	ofxGen::Manager::registration<Layers::Layer06_3d>("Layer06_3d");
 
 	ofDisableArbTex();
 	final_out_fbo.allocate(settings.width, settings.height, GL_RGBA);
