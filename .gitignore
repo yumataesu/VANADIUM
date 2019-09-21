@@ -1,0 +1,12 @@
+.vs/
+obj/
+*.dll
+*.exe
+*.exp
+*.lib
+*.user
+*.filters
+*.vcxproj
+*.sln
+*.rc
+*.aps

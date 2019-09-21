@@ -1,0 +1,21 @@
+[submodule "addons/ofxGen"]
+	path = addons/ofxGen
+	url = https://github.com/yumataesu/ofxGen
+[submodule "addons/ofxAutoReloadedShader"]
+	path = addons/ofxAutoReloadedShader
+	url = https://github.com/P-A-N/ofxAutoReloadedShader
+[submodule "addons/ofxBloom"]
+	path = addons/ofxBloom
+	url = https://github.com/P-A-N/ofxBloom
+[submodule "addons/ofxDeferredLighting"]
+	path = addons/ofxDeferredLighting
+	url = https://github.com/yumataesu/ofxDeferredLighting
+[submodule "addons/ofxSSAO"]
+	path = addons/ofxSSAO
+	url = https://github.com/yumataesu/ofxSSAO
+[submodule "addons/ofxImGui_v3"]
+	path = addons/ofxImGui_v3
+	url = https://github.com/yumataesu/ofxImGui_v3
+[submodule "addons/ofxBasement"]
+	path = addons/ofxBasement
+	url = https://github.com/yumataesu/ofxBasement
