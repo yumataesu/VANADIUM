@@ -64,16 +64,13 @@ void ofApp::update() {
 //--------------------------------------------------------------
 void ofApp::draw() {
 	ofBackground(20);
-	final_out_fbo.draw(0, 0);
+	final_out_fbo.draw(0, 0, ofGetWidth(), ofGetHeight());
 }
 
 //--------------------------------------------------------------
 void ofApp::gui(ofEventArgs& e) {
 
 	imgui.begin();
-	ImGui::Begin("Infomation");
-	ImGui::Text(std::to_string(ofGetFrameRate()).c_str());
-	ImGui::End();
 
 	gen_manager->drawSlotGui();
 	ofxGen::drawUtilGui();
