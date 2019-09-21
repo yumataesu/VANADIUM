@@ -9,14 +9,29 @@ namespace Layers {
 class Layer01_2d : public BaseLayer {
 public:
 	void setup() {
-		parameter_group_.add(position.set("Position", glm::vec2(100.f), glm::vec2(0.f), glm::vec2(width_, height_)));
+		parameter_group_.add(num.set("Num", 0.5, 0, 1.0));
+		parameter_group_.add(grid.set("Grid", glm::vec2(10), glm::vec2(1), glm::vec2(50)));
+		shader.load("ofxGen/Layer01_2d/shader");
+		quad.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+		quad.addVertex(ofVec3f(1.0, 1.0, 0.0));
+		quad.addTexCoord(ofVec2f(1.0f, 1.0f));
+		quad.addVertex(ofVec3f(1.0, -1.0, 0.0));
+		quad.addTexCoord(ofVec2f(1.0f, 0.0f));
+		quad.addVertex(ofVec3f(-1.0, -1.0, 0.0));
+		quad.addTexCoord(ofVec2f(0.0f, 0.0f));
+		quad.addVertex(ofVec3f(-1.0, 1.0, 0.0));
+		quad.addTexCoord(ofVec2f(0.0f, 1.0f));
 	}
 	void update(const double delta_time) {
 		elapsed_time += delta_time * speed;
 	}
 	void draw() {
-		ofSetColor(main_col.get());
-		ofDrawCircle(position.get().x, position.get().y, 50 + 50 * sin(elapsed_time));
+		shader.begin();
+		shader.setUniform1f("u_time", elapsed_time);
+		shader.setUniform1f("num", num);
+		shader.setUniform2f("u_grid", grid.get().x, grid.get().y);
+		quad.draw();
+		shader.end();
 	}
 
 	void bang() override {
@@ -24,7 +39,12 @@ public:
 	}
 
 private:
-	ofParameter<glm::vec2> position;
+	ofParameter<float> num;
+	ofParameter<float> up_sp = 1.0f;
+	ofParameter<glm::vec2> grid;
 	double elapsed_time;
+
+	ofVboMesh quad;
+	ofxAutoReloadedShader shader;
 };
 }

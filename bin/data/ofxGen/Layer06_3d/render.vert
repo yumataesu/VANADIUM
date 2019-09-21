@@ -1,11 +1,8 @@
 #version 430
 
-uniform mat4 modelViewProjectionMatrix;
-uniform mat4 modelViewMatrix;
-
-uniform mat4 model;
-uniform mat4 view;
 uniform mat4 projection;
+uniform mat4 view;
+uniform mat4 model;
 
 in vec4 position;
 in vec2 texcoord;

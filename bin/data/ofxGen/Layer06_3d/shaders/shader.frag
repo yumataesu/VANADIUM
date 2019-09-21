@@ -1,12 +1,11 @@
 #version 410
 
-uniform sampler2D u_tex;
+uniform sampler2D u_src;
 uniform float u_time;
 uniform float u_scale;
 uniform float u_sp;
 uniform float u_seed;
 uniform float u_alpha;
-uniform vec4 u_col;
 
 in vec2 v_texcoord;
 in vec4 v_world;
@@ -92,9 +91,9 @@ void main() {
     );
 
     vec3 r = rot * vec3(mr, 0.0);
-    vec3 eye = vec3(1.0) - texture(u_tex, r.rg).rgb;
-    if(color.r < 0.1) discard;
+    vec3 eye = vec3(1.0) - texture(u_src, r.rg).rgb;
+    //if(color.r < 0.1) discard;
     
-    fragColor = vec4(eye * u_col.rgb, u_alpha);
+    fragColor = vec4(1,1,1, 1);
     fragColor_world = vec4(v_world.xyz, 1);
 }

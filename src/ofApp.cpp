@@ -4,7 +4,7 @@
 void ofApp::setup() {
 	initGuiSkin();
 	ofSetVerticalSync(false);
-	ofSetFrameRate(60);
+	ofSetFrameRate(30);
 
 	ofFbo::Settings settings;
 	settings.width = 1280;
@@ -73,6 +73,8 @@ void ofApp::gui(ofEventArgs& e) {
 	imgui.begin();
 
 	gen_manager->drawSlotGui();
+	gen_manager->draw2dGui();
+	gen_manager->draw3dGui();
 	ofxGen::drawUtilGui();
 	ofxGen::drawBackyardGui();
 
@@ -117,7 +119,8 @@ void ofApp::initGuiSkin() {
 	style.PopupRounding = 0.f;
 	style.FramePadding = ImVec2(2.f, 6.f);
 	style.ItemSpacing = ImVec2(8.f, 4.f);
-	style.GrabMinSize = 10.f;
+	style.GrabMinSize = 8.f;
+	style.ScrollbarSize = 8.f;
 
 	ImVec4* colors = ImGui::GetStyle().Colors;
 	colors[ImGuiCol_Text] = ImVec4(1.00f, 1.00f, 1.00f, 1.00f);
