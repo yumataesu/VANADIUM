@@ -35,7 +35,7 @@ git clone --recursive https://github.com/yumataesu/vanadium
 1. Add the following template to Layers folder
 If you write 3D scene, you have to add `set3D()` in setup.
 
-```
+```C++
 #pragma once
 #include "ofMain.h"
 #include "ofxGen.h"
@@ -58,7 +58,7 @@ private:
 }
 ```
 
-2. you can use these variable in your Layer class
+2. Write your scene with these variable
 * <b>width_</b> : canvas width
 * <b>height_</b> : canvas height
 * <b>parameter_group_</b> : parameter group for save/load
@@ -68,6 +68,32 @@ private:
 
 3. register your class to manager class
 
-```
+```C++
 ofxGen::Manager::registeration<Layers::Your_layer>("Your_layer"); // in ofApp::setup
+
 ```
+
+
+## UI
+
+
+<div style="text-align: left;">
+	
+![slot](https://github.com/yumataesu/vanadium/blob/master/docs/slot2.png)
+
+</div>
+
+
+<div style="text-align: right;">
+	
+|   |   |
+|--:|---|
+| 1  | Layer Delete Button  |
+|  2 |  Layer Alpha |
+|  3 | Preset Combo Box  |
+|  4 | User defined parames(ofParameter)  |
+|  5 |  Update(save) currrent preset |
+|  6 |  Add new preset as json |
+|  7 |  Get screenshot for thumbnnail |
+	
+</div>
