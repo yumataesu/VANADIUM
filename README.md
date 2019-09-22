@@ -23,6 +23,10 @@ vanadium is a Visual Contents Management System for openFrameworks Intermediates
 * openFrameworks v0.10.1
 * windows 10 (not tested on mac)
 
+0. Update oF's GLFW library
+ This project is using imgui on experimental branch to use a docking system.
+So to build this project, you have to replace glfw to latest now.
+
 1. <b>git clone</b>
 ```
 git clone --recursive https://github.com/yumataesu/vanadium
