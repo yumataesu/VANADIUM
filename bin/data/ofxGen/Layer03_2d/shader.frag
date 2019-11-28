@@ -1,5 +1,8 @@
 #version 410
 
+// author: Genco Levi // sporadiclizard
+// shadertoy: https://www.shadertoy.com/view/MtcBzH
+
 uniform float u_time;
 uniform float u_alpha;
 uniform vec2 u_point;
