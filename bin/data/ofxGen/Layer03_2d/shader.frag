@@ -1,4 +1,4 @@
-#version 410
+#version 330
 
 // author: Genco Levi // sporadiclizard
 // shadertoy: https://www.shadertoy.com/view/MtcBzH

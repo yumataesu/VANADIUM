@@ -1,4 +1,4 @@
-#version 410
+#version 330
 
 uniform sampler2D u_src;
 uniform float u_time;

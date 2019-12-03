@@ -4,7 +4,7 @@
 //========================================================================
 int main( ){
 	ofGLFWWindowSettings settings;
-	settings.setGLVersion(4, 5);
+	settings.setGLVersion(3, 3);
 	settings.setSize(1280, 720);
 	settings.decorated = true;
 	std::shared_ptr<ofAppBaseWindow> guiWindow = ofCreateWindow(settings);

@@ -32,7 +32,7 @@ void ofApp::setup() {
 
 	ofDisableArbTex();
 	final_out_fbo.allocate(settings.width, settings.height, GL_RGBA);
-	gen_manager = std::make_unique<ofxGen>(8, settings, "Main");
+	gen_manager = std::make_unique<ofxGen>(5, settings, "Main");
 	ofxGen::setupBackyard();
 	ofxdeferredlighting = std::make_unique<ofx::DeferredLighting>(settings.width, settings.height);
 	ofAddListener(ofEvents().draw, this, &ofApp::gui, OF_EVENT_ORDER_AFTER_APP);

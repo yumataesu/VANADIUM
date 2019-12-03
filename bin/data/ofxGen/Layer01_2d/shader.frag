@@ -1,4 +1,4 @@
-#version 410
+#version 330
 
 uniform float u_alpha;
 uniform float u_time;
